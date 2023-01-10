@@ -6,7 +6,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { CountryCardProps } from '../../../utils/homepageInterfaces'
-import classnames from "classnames"
 
 const useStyles = makeStyles({
 
@@ -58,7 +57,7 @@ const CountryCard = ({
             {name}
           </Typography>
           <Typography className={darkMode ? classes.titleDark : classes.title} variant='body1' color='textSecondary'>
-            {population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+            Population: {population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
           </Typography>
           <Typography className={darkMode ? classes.titleDark : classes.title} variant='body1' color='textSecondary'>
             Region: {region}

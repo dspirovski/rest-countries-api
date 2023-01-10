@@ -107,7 +107,7 @@ const CountryDetails = ({ specificCountryDetails, setShowCountryDetails, setSear
         : <>
           {specificCountryDetails && specificCountryDetails.map((data: any, index: number) => {
             return (
-              < Grid key={index} container className={classes.container}>
+              <Grid key={index} container className={classes.container}>
                 {isLoading && !error && <h4>Loading........</h4>}
                 {error && !isLoading && alert(error)}
                 <Grid item xs={12} sm={12} md={6} className={classes.leftSection}>

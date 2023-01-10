@@ -10,12 +10,21 @@ const useStyles = makeStyles((theme) => ({
     height: '80vh',
     alignItems: 'center',
   },
-  mainContainer: {
+  mainContainerLight: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '80vh',
   },
+
+  mainContainerDark: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: 'auto',
+    background: '#222e37',
+  },
+
   container: {
     marginTop: 10,
   },
@@ -96,7 +105,7 @@ const Countries = ({
           <CircularProgress />
         </div>
         :
-        <div className={classes.mainContainer}>
+        <div className={darkMode ? classes.mainContainerDark : classes.mainContainerLight}>
           <Container>
             <Grid container spacing={3} className={classes.container}>
               {searchedCountries.map((country: any, index: number) => {
