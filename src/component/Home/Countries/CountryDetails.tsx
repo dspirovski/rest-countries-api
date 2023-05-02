@@ -92,6 +92,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+
+Renders the details of a specific country.
+@param {Object} specificCountryDetails - Object containing the specific details of the country.
+@param {Function} setShowCountryDetails - Function to update the state of whether to show the country details or not.
+@param {Function} setSearchValue - Function to update the search value in the parent component.
+@param {boolean} darkMode - Boolean value to determine if dark mode is enabled or not.
+@param {string} error - String containing the error message, if any.
+@param {boolean} isLoading - Boolean value to determine if data is still being loaded or not.
+@returns {JSX.Element} - Returns the JSX elements to render the country details.
+*/
+
 const CountryDetails = ({
   specificCountryDetails,
   setShowCountryDetails,
